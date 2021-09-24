@@ -1,0 +1,15 @@
+.calendar .react-date-picker__wrapper {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #8c8c8c;
+}
+.calendar input, .calendar .react-date-picker__inputGroup__divider {
+    color: #8c8c8c !important;
+    font-weight: 500;
+    border: none;
+}
+.calendar .react-date-picker__inputGroup {
+    display: flex;
+    justify-content: center;
+}
