@@ -1,8 +1,8 @@
-import ImageCard from "../components/ImageCard";
+import ImageModal from "../components/ImageModal";
 
 export default {
-    title: 'ImageCard',
-    component: ImageCard,
+    title: 'ImageModal',
+    component: ImageModal,
     argTypes: {
         src: {
             defaultValue: "https://apod.nasa.gov/apod/image/2109/LDN1251Gualco1024.jpg", control: {
@@ -12,6 +12,6 @@ export default {
     }
 };
 const Template = args => (
-    <ImageCard {...args}/>
+    <ImageModal {...args}/>
 )
-export const imageCard = Template.bind({});
+export const imageModal = Template.bind({});

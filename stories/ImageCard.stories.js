@@ -1,17 +1,17 @@
-import Hashtag from "../components/Hashtag";
+import ImageCard from "../components/ImageCard";
 
 export default {
-    title: 'Hashtag',
-    component: Hashtag,
+    title: 'ImageCard',
+    component: ImageCard,
     argTypes: {
-        label: {
-            defaultValue: "galaxy", control: {
+        src: {
+            defaultValue: "https://apod.nasa.gov/apod/image/2109/LDN1251Gualco1024.jpg", control: {
                 type: "text"
             }
         }
     }
 };
 const Template = args => (
-    <Hashtag {...args}/>
+    <ImageCard {...args}/>
 )
-export const hashtag = Template.bind({});
+export const imageCard = Template.bind({});

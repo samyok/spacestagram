@@ -1,35 +1,22 @@
-// import Navigation from "../components/Navigation";
-// import {storiesOf} from "@storybook/react";
-//
-//
-// storiesOf("Navigation", module).add("default", () => {
-//     return <Navigation/>
-// })
-//
-// storiesOf("Navigation", module).addParameters({
-//     page: {
-//         values: [
-//             {name: "home", path: "/"},
-//             {name: "about", path: "/about"},
-//             {name: "my likes", path: "/likes"}
-//         ]
-//     }
-// }).add("home", ({parameters}) => {
-//     return <Navigation {...parameters}/>
-// })
-import Navigation from "../components/Navigation";
+import HeroText from "../components/HeroText";
 
 export default {
-    title: 'Navigation',
-    component: Navigation,
+    title: 'Herotext',
+    component: HeroText,
     argTypes: {
-        page: {
-            options: ['/', '/about', '/likes'],
-            control: {type: 'radio'}
+        line1: {
+            defaultValue: "astronomy picture", control: {
+                type: "text"
+            }
+        },
+        line2: {
+            defaultValue: "of the day", control: {
+                type: "text"
+            }
         }
     }
 };
 const Template = args => (
-    <Navigation {...args}/>
+    <HeroText {...args}/>
 )
-export const navigation = Template.bind({});
+export const herotext = Template.bind({});

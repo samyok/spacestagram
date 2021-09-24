@@ -1,23 +1,16 @@
-import LikeButton from "../components/LikeButton";
+import CalendarSelect from "../components/CalendarSelect";
 
 export default {
-    title: 'LikeButton',
-    component: LikeButton,
+    title: 'CalendarSelect',
+    component: CalendarSelect,
     argTypes: {
-        likes: {
-            defaultValue: 4,
-            control: {type: 'number'}
-        },
-        size: {
-            defaultValue: "md",
-            options: ["md", "lg"],
-            control: {
-                type: "select",
-            }
+        date: {
+            defaultValue: new Date(),
+            control: {type: 'date'}
         }
     }
 };
 const Template = args => (
-    <LikeButton {...args}/>
+    <CalendarSelect {...args}/>
 )
-export const likeButton = Template.bind({});
+export const calendarSelect = Template.bind({});

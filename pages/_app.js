@@ -1,7 +1,20 @@
-import '../styles/globals.css'
+import {ChakraProvider, extendTheme} from "@chakra-ui/react"
+import '../styles/CalendarSelectOverrides.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const theme = extendTheme({
+    fonts: {
+        heading: "Catamaran",
+        body: "Source Sans Pro",
+    },
+})
+
+
+function MyApp({Component, pageProps}) {
+    return (
+        <ChakraProvider theme={theme}>
+            <Component {...pageProps} />
+        </ChakraProvider>
+    )
 }
 
 export default MyApp

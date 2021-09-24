@@ -1,35 +1,23 @@
-// import Navigation from "../components/Navigation";
-// import {storiesOf} from "@storybook/react";
-//
-//
-// storiesOf("Navigation", module).add("default", () => {
-//     return <Navigation/>
-// })
-//
-// storiesOf("Navigation", module).addParameters({
-//     page: {
-//         values: [
-//             {name: "home", path: "/"},
-//             {name: "about", path: "/about"},
-//             {name: "my likes", path: "/likes"}
-//         ]
-//     }
-// }).add("home", ({parameters}) => {
-//     return <Navigation {...parameters}/>
-// })
-import Navigation from "../components/Navigation";
+import LikeButton from "../components/LikeButton";
 
 export default {
-    title: 'Navigation',
-    component: Navigation,
+    title: 'LikeButton',
+    component: LikeButton,
     argTypes: {
-        page: {
-            options: ['', '/', '/about', '/likes'],
-            control: {type: 'radio'}
+        likes: {
+            defaultValue: 4,
+            control: {type: 'number'}
+        },
+        size: {
+            defaultValue: "md",
+            options: ["md", "lg"],
+            control: {
+                type: "select",
+            }
         }
     }
 };
 const Template = args => (
-    <Navigation {...args}/>
+    <LikeButton {...args}/>
 )
-export const navigation = Template.bind({});
+export const likeButton = Template.bind({});

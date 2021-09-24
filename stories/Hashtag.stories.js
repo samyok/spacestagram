@@ -1,22 +1,17 @@
-import HeroText from "../components/HeroText";
+import Hashtag from "../components/Hashtag";
 
 export default {
-    title: 'Herotext',
-    component: HeroText,
+    title: 'Hashtag',
+    component: Hashtag,
     argTypes: {
-        line1: {
-            defaultValue: "astronomy picture", control: {
-                type: "text"
-            }
-        },
-        line2: {
-            defaultValue: "of the day", control: {
+        label: {
+            defaultValue: "galaxy", control: {
                 type: "text"
             }
         }
     }
 };
 const Template = args => (
-    <HeroText {...args}/>
+    <Hashtag {...args}/>
 )
-export const herotext = Template.bind({});
+export const hashtag = Template.bind({});
